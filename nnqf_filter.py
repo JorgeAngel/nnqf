@@ -100,7 +100,7 @@ def nnqf_filter(x_input,y_output,num_neighbors = 10,q_quantile = 0.5,var_weighti
        y_neighbors = np.vstack([y_neighbors,values_to_add])
 
    #--
-   #We calculate the q_quantile of the of the nearest neighbors output values
+   #We calculate the q_quantile of the nearest neighbors output values
    #and create with them a new output vector yq_output
     
    yq_output = np.quantile(y_neighbors,q=q_quantile,axis=1)
