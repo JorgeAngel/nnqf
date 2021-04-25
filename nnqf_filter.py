@@ -57,7 +57,7 @@ def nnqf_filter(x_input,y_output,num_neighbors = 10,q_quantile = 0.5,var_weighti
    nearest neighbors output values      
    
    var_weighting : bool, default = True ;
-   Value definign if the columns of the input matrix are going to be multiplied 
+   Value defining if the columns of the input matrix are going to be multiplied 
    by the inverse of their variance
    
    minkowski_dist : int, default = 2 ;
@@ -75,7 +75,7 @@ def nnqf_filter(x_input,y_output,num_neighbors = 10,q_quantile = 0.5,var_weighti
    #--
    #Each column of the input matrix is multiplied by the inverse of its variance, 
    #in order to avoid a feature with a huge scale to overpower the others at the 
-   #moment of caluclating the distances
+   #moment of calculating the distances
     
    if var_weighting:
        var_weights = np.var(x_input,axis = 0)
@@ -91,7 +91,7 @@ def nnqf_filter(x_input,y_output,num_neighbors = 10,q_quantile = 0.5,var_weighti
    
     
     #--
-    #We create a matrix containing the output values of neareast neighbors of
+    #We create a matrix containing the output values of nearest neighbors of
     #each input vector
     
    y_neighbors = y_output[indx[0,:]]
